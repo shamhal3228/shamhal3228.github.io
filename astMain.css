@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "SpaceAgeCyrillic";
+    src: url(src/SpaceAgeCyrillic.ttf);
+}
+
+body{
+	margin: 100px auto;
+	background-image: url(src/space.jpg);
+	background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+h1{
+	font-family: SpaceAgeCyrillic;
+	font-size:40px;
+	margin-top:0px;
+}
+
+h2{
+	font-family: "SpaceAgeCyrillic";
+}
+
+p{
+	font-family: Comic Sans MS;
+	text-indent: 30px;
+}
+
+#pimg{
+	text-align:center;
+	font-size:15px;
+	font-family: Comic Sans MS;
+}
+
+.container{
+    background-color: white;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 0px auto;
+    max-width: 1200px;
+	height:auto;
+}
+
+.container p{
+    text-align: justify;
+}
+
+.container img{
+    display: block;
+    margin: auto;
+    width: 100%;
+    height: auto;
+}
+
+.container .video{
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    text-align: center;
+}
+
+.container .video iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.header {
+  background-color: #00008B;
+  width: 100%;
+  position: fixed;
+  margin-top: -100px;
+  z-index: 3;
+}
+
+.header ul {
+  background-color: #00008B;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+}
+
+.header li a {
+  color: #7FFFD4;
+  display: block;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.header li a:hover,
+.header .menu-button:hover {
+  background-color: #FFA07A;
+}
+	
+.header .logo {
+  display: block;
+  float: left;
+  padding: 5px 10px;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .3s ease-out;
+}
+
+.header .menu-icon {
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+}
+
+.header .menu-icon .nav-icon {
+  background: #FF7F50;
+  display: block;
+  width: 18px;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+}
+
+.header .menu-icon .nav-icon:before,
+.header .menu-icon .nav-icon:after {
+  background: #FF7F50;
+  display: block;
+  height: 100%;
+  width: 100%;
+  content: '';
+  position: absolute;
+  transition: 0.6s;
+}
+
+.header .menu-icon .nav-icon:before {
+  top: 5px;
+}
+
+.header .menu-icon .nav-icon:after {
+  top: -5px;
+}
+
+.header .menu-button {
+  display: none;
+}
+
+.header .menu-button:checked ~ .menu {
+  max-height: 300px;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon {
+  background: transparent;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon:before {
+  transform: rotate(-45deg);
+  top:0;
+}
+
+.header .menu-button:checked ~ .menu-icon .nav-icon:after {
+  transform: rotate(45deg);
+  top:0;
+}
+
+.toTop{
+    position: fixed;
+	width: 40px;
+	height: 40px;
+    right: 30px;
+    bottom: 30px;
+    background: rgba(0, 0, 0, 0.4) url(src/arrow.png) no-repeat;
+	background-position: center, center;
+	box-shadow: 0 0 14px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+.toTop:hover{
+	cursor: pointer;
+	background-color: rgba(0, 0, 0, 0.55);
+	transition-duration: .5s;
+}
+
+.toTop:active{
+	background-color: rgba(0, 0, 0, 0.7);
+	transition-duration: .1s;
+}
+
+@media (min-width: 1000px) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    display: flex;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
